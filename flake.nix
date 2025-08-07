@@ -1,8 +1,10 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
-    nixos-avf = {
-      url = "github:nix-community/nixos-avf";
+    nixos-avf.url = "github:nix-community/nixos-avf";
+
+    home-manager = {
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
