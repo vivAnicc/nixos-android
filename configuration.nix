@@ -35,6 +35,7 @@
     vim
     neovim
     git
+    wget
 
     inputs.helix.packages."${pkgs.system}".helix
   ];

@@ -3,6 +3,10 @@
 {
   nixpkgs.config.allowUnfree = true;
 
+  imports = [
+    modules/fish.nix
+  ];
+
   home = {
     username = "droid";
     homeDirectory = "/home/droid";
