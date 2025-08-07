@@ -27,6 +27,8 @@
     vim
     neovim
     git
+
+    inputs.helix.packages."${pkgs.system}".helix
   ];
 
   programs.fish.enable = true;
