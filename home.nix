@@ -20,7 +20,6 @@
     };
 
 		packages = [
-			pkgs.nerd-fonts.adwaita-mono
 		];
   };
 

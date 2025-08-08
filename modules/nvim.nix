@@ -27,9 +27,9 @@
 			telescope = {
 				enable = true;
 				keymaps = {
-					f = "find_files";
-					b = "buffers";
-					h = "help_tags";
+					"<leader>f" = "find_files";
+					"<leader>b" = "buffers";
+					"<leader>h" = "help_tags";
 				};
 			};
     };

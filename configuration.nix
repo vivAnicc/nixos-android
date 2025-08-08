@@ -38,6 +38,10 @@
   programs.fish.enable = true;
   users.users.droid.shell = pkgs.fish;
 
+	fonts.packages = [
+		pkgs.nerd-fonts._0xproto
+	];
+
   # Change default user
   # avf.defaultUser = "droid";
 
