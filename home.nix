@@ -5,13 +5,8 @@
 
   imports = [
     modules/fish.nix
-    inputs.nixvim.homeModules.nixvim
+    modules/nvim.nix
   ];
-
-  programs.nixvim = {
-    enable = true;
-    colorschemes.catppuccin.enable = true;
-  };
 
   home = {
     username = "droid";
