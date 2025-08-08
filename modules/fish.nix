@@ -22,4 +22,6 @@
 
     shellInit = lib.fileContents ../dotfiles/fish/config.fish;
   };
+
+  home.file.".config/fish/themes/Catppuccin Mocha.theme".source = ../dotfiles/fish/themes + "/Catppuccin Mocha.theme";
 }
