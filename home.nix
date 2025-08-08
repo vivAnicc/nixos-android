@@ -5,15 +5,21 @@
 
   imports = [
     modules/fish.nix
+    inputs.nixvim.homeModules.nixvim
   ];
+
+  programs.nixvim = {
+    enable = true;
+    colorschemes.catppuccin.enable = true;
+  };
 
   home = {
     username = "droid";
     homeDirectory = "/home/droid";
-    stateVersion = "25.05";
+    stateVersion = "25.11";
 
     sessionVariables = {
-      EDITOR = "hx";
+      EDITOR = "nvim";
       MANPAGER = "less";
     };
   };
