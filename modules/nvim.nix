@@ -72,5 +72,9 @@
 		extraConfigLua = ''
 			vim.lsp.enable({"nixd", "zls"})
 		'';
+
+		extraPackages = [
+			pkgs.nerd-fonts._0xproto
+		];
   };
 }
