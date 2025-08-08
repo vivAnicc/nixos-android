@@ -17,6 +17,10 @@
       EDITOR = "nvim";
       MANPAGER = "less";
     };
+
+		packages = [
+			pkgs.nerd-fonts.adwaita-mono
+		];
   };
 
   programs.home-manager.enable = true;
