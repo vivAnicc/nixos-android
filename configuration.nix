@@ -31,8 +31,9 @@
     tldr
     git
     wget
+		helix
 
-    inputs.helix.packages."${pkgs.system}".helix
+    # inputs.helix.packages."${pkgs.system}".helix
   ];
 
   programs.fish.enable = true;

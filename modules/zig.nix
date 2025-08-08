@@ -1,8 +1,8 @@
-{ pkgs, lib, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 {
 	home.packages = [
-		pkgs.zig
-		pkgs.zls
+		inputs.zig.packages."${pkgs.system}".master
+		inputs.zls.packages."${pkgs.system}".zls
 	];
 }

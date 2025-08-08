@@ -8,10 +8,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    helix = {
-      url = "github:helix-editor/helix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # helix = {
+    #   url = "github:helix-editor/helix";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     nixvim = {
       url = "github:nix-community/nixvim";
@@ -22,6 +22,16 @@
       url = "github:MercuryTechnologies/nix-your-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+		zls = {
+			url = "path:/home/droid/src/zls";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+
+		zig = {
+			url = "github:mitchellh/zig-overlay";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
   };
 
   outputs = inputs@{ self, nixpkgs, ... }: {
