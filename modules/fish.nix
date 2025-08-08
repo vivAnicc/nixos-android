@@ -1,19 +1,41 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, inputs, ... }:
 
 {
   home.packages = [
     pkgs.fish
     pkgs.fzf
+    inputs.nix-your-shell.packages."${pkgs.system}".nix-your-shell
   ];
 
   programs.fish = {
     enable = true;
     generateCompletions = true;
 
+    shellAbbrs = {
+      v = "nvim";
+      la = "ls -A";
+      n = "nix";
+      nr = "nix repl";
+      nd = "cd /etc/nixos";
+      ngc = "sudo nix-collect-garbage -d";
+      nbs = "nixos-rebuild switch --flake /etc/nixos#nick --sudo";
+      s = "sudo";
+      g = "git";
+      ga = "git add .";
+      gc = {
+	setCursor = "%";
+        expansion = "git commit -m '%'";
+      };
+      gca = "git commit --amend --no-edit";
+    };
     functions = {
+      d = ''
+        mkdir $argv && cd $argv
+      '';
       fish_greeting = "";
       fish_prompt = lib.fileContents ../dotfiles/fish/functions/fish_prompt.fish;
       fish_user_key_bindings = lib.fileContents ../dotfiles/fish/functions/fish_user_key_bindings.fish;
+      fish_right_prompt = lib.fileContents ../dotfiles/fish/functions/fish_right_prompt.fish;
     };
 
     shellAliases = {

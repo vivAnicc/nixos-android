@@ -12,3 +12,5 @@ set fish_vi_force_cursor
 set -e fish_features
 
 fish_config theme choose "Catppuccin Mocha"
+
+nix-your-shell fish | source
