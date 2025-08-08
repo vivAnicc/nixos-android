@@ -5,17 +5,33 @@
     inputs.nixvim.homeModules.nixvim
   ];
 
+	home.packages = [
+		pkgs.nixd
+	];
+
   programs.nixvim = {
     enable = true;
     colorschemes.catppuccin.enable = true;
 
     plugins = {
       oil.enable = true;
+
       treesitter = {
 	enable = true;
 	settings.highlight.enable = true;
       };
+
       lspconfig.enable = true;
+
+			web-devicons.enable = true;
+			telescope = {
+				enable = true;
+				keymaps = {
+					f = "find_files";
+					b = "buffers";
+					h = "help_tags";
+				};
+			};
     };
 
     opts = {
@@ -27,6 +43,7 @@
       incsearch = true;
 
       number = true;
+			relativenumber = true;
       signcolumn = "yes";
       cursorcolumn = false;
 
@@ -43,5 +60,17 @@
     globals = {
       mapleader = " ";
     };
+
+		keymaps = [
+			{
+				mode = "n";
+				key = "<leader>e";
+				action = "<cmd>Oil<CR>";
+			}
+		];
+
+		extraConfigLua = ''
+			vim.lsp.enable({"nixd", "zls"})
+		'';
   };
 }
