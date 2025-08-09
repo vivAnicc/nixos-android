@@ -48,12 +48,37 @@ in {
 			};
     };
 
-		lsp.servers = {
-			nixd.enable = true;
-			zls.enable = true;
-		};
+		lsp = {
+			servers = {
+				nixd.enable = true;
+				zls.enable = true;
+			};
 
-		lsp.inlayHints.enable = true;
+			inlayHints.enable = true;
+
+			keymaps = [
+				{
+					key = "gd";
+					lspBufAction = "definition";
+				}
+				{
+					key = "gt";
+					lspBufAction = "type_definition";
+				}
+				{
+					key = "gr";
+					lspBufAction = "references";
+				}
+				# {
+				# 	key = "<leader>lh";
+				# 	lspBufAction = "inlay_hint";
+				# }
+				{
+					key = "<leader>ls";
+					lspBufAction = "signature_help";
+				}
+			];
+		};
 
     opts = {
       tabstop = 2;
