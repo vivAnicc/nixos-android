@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -18,6 +18,7 @@
     };
 
 		packages = [
+			pkgs.file
 		];
   };
 

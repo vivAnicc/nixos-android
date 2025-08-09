@@ -32,6 +32,7 @@
     git
     wget
 		helix
+		tree
 
     # inputs.helix.packages."${pkgs.system}".helix
   ];
