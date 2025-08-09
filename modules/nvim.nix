@@ -47,7 +47,6 @@ in {
 
 			web-devicons = {
 				enable = true;
-				settings.default = true;
 			};
 
 			telescope = {
@@ -127,6 +126,10 @@ in {
 				action = "<cmd>Oil<CR>";
 			}
 		];
+
+		extraConfigLuaPre = ''
+			require'nvim-web-devicons'.setup {}
+		'';
 
 		extraPackages = [
 			pkgs.nerd-fonts._0xproto
