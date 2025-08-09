@@ -17,8 +17,12 @@
       oil.enable = true;
 
       treesitter = {
-	enable = true;
-	settings.highlight.enable = true;
+				enable = true;
+				settings = {
+					highlight.enable = true;
+					ensure_installed = "all";
+					indent.enable = true;
+				};
       };
 
       lspconfig.enable = true;
