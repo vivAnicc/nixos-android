@@ -14,14 +14,16 @@
     colorschemes.catppuccin.enable = true;
 
     plugins = {
+    	lz-n.enable = true;
+
       oil.enable = true;
 
       treesitter = {
 				enable = true;
 				settings = {
 					highlight.enable = true;
-					ensure_installed = "all";
 					indent.enable = true;
+					auto_install = true;
 				};
       };
 
@@ -30,6 +32,7 @@
 			web-devicons.enable = true;
 			telescope = {
 				enable = true;
+				lazyLoad.settings.cmd = "Telescope";
 				keymaps = {
 					"<leader>f" = "find_files";
 					"<leader>b" = "buffers";
