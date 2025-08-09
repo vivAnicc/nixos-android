@@ -34,6 +34,11 @@
 			};
     };
 
+		lsp.servers = {
+			nixd.enable = true;
+			zls.enable = true;
+		};
+
     opts = {
       tabstop = 2;
       shiftwidth = 2;
@@ -68,10 +73,6 @@
 				action = "<cmd>Oil<CR>";
 			}
 		];
-
-		extraConfigLua = ''
-			vim.lsp.enable({"nixd", "zls"})
-		'';
 
 		extraPackages = [
 			pkgs.nerd-fonts._0xproto
