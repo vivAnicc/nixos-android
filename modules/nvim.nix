@@ -1,13 +1,20 @@
-{ pkgs, inputs, ... }:
+{ lib, pkgs, inputs, ... }:
 
-{
+let
+	parsers = lib.mapAttrsToList
+		(_: a: a) 
+		pkgs.vimPlugins.nvim-treesitter-parsers;
+	parsers-pkgs = lib.filter
+		lib.isDerivation
+		parsers;
+in {
   imports = [
     inputs.nixvim.homeModules.nixvim
   ];
 
 	home.packages = [
 		pkgs.nixd
-	];
+	] ++ parsers-pkgs;
 
   programs.nixvim = {
     enable = true;
@@ -23,7 +30,7 @@
 				settings = {
 					highlight.enable = true;
 					indent.enable = true;
-					auto_install = true;
+					# auto_install = true;
 				};
       };
 
