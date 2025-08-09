@@ -1,4 +1,4 @@
-{ lib, pkgs, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports = [
@@ -45,6 +45,8 @@
 			nixd.enable = true;
 			zls.enable = true;
 		};
+
+		lsp.inlayHints.enable = true;
 
     opts = {
       tabstop = 2;
