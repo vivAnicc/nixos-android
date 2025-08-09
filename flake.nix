@@ -36,7 +36,7 @@
 		nordvpn.url = "path:/home/droid/nix/nordvpn";
   };
 
-  outputs = inputs@{ nordvpn, nixpkgs, ... }: {
+  outputs = inputs@{ nixpkgs, ... }: {
     nixosConfigurations.nick = nixpkgs.lib.nixosSystem (
 			let
 				pkgs = import nixpkgs {
@@ -53,7 +53,7 @@
 
 				modules = [
 					./configuration.nix
-					nordvpn.nixosModules.nordvpn
+					inputs.nordvpn.nixosModules.nordvpn
 				];
 			}
 		);
