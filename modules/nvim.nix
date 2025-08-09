@@ -127,10 +127,6 @@ in {
 			}
 		];
 
-		extraConfigLuaPre = ''
-			require'nvim-web-devicons'.setup {}
-		'';
-
 		extraPackages = [
 			pkgs.nerd-fonts._0xproto
 		];

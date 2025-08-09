@@ -32,17 +32,30 @@
 			url = "github:mitchellh/zig-overlay";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+
+		nordvpn.url = "path:/home/droid/nix/nordvpn";
   };
 
-  outputs = inputs@{ self, nixpkgs, ... }: {
-    nixosConfigurations.nick = nixpkgs.lib.nixosSystem {
-      system = "aarch64-linux";
+  outputs = inputs@{ nordvpn, nixpkgs, ... }: {
+    nixosConfigurations.nick = nixpkgs.lib.nixosSystem (
+			let
+				pkgs = import nixpkgs {
+					system = "aarch64-linux";
+					config = {
+						allowUnfree = true;
+						allowUnfreePredicate = _: true;
+					};
+				};
+			in {
+				system = "aarch64-linux";
 
-      specialArgs = {inherit inputs;};
+				specialArgs = {inherit pkgs inputs;};
 
-      modules = [
-        ./configuration.nix
-      ];
-    };
+				modules = [
+					./configuration.nix
+					nordvpn.nixosModules.nordvpn
+				];
+			}
+		);
   };
 }

@@ -2,13 +2,14 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports = [
     # include nixos-avf modules
     inputs.nixos-avf.nixosModules.avf
     inputs.home-manager.nixosModules.home-manager
+		modules/nordvpn.nix
   ];
 
   nix.settings.experimental-features = [
@@ -16,13 +17,12 @@
     "flakes"
   ];
 
-  nixpkgs.config.allowUnfree = true;
-
   home-manager = {
     backupFileExtension = "bck";
     extraSpecialArgs = {inherit inputs;};
     users."droid" = import ./home.nix;
     useUserPackages = true;
+		useGlobalPkgs = true;
   };
 
   services.openssh.enable = true;

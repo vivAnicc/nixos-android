@@ -1,0 +1,5 @@
+{ ... }:
+
+{
+	programs.nordvpn.enable = true;
+}

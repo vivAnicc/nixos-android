@@ -1,8 +1,6 @@
-{ lib, config, pkgs, inputs, ... }:
+{ ... }:
 
 {
-  nixpkgs.config.allowUnfree = true;
-
   imports = [
     modules/fish.nix
     modules/nvim.nix
