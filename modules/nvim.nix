@@ -23,7 +23,16 @@ in {
     plugins = {
     	lz-n.enable = true;
 
-      oil.enable = true;
+      oil = {
+				enable = true;
+				lazyLoad.settings.cmd = "Oil";
+				settings = {
+					columns = [ "icons" ];
+					constrain_cursor = "name";
+					default_file_explorer = true;
+					skip_confirm_for_simple_edits = true;
+				};
+			};
 
       treesitter = {
 				enable = true;
@@ -36,7 +45,11 @@ in {
 
       lspconfig.enable = true;
 
-			web-devicons.enable = true;
+			web-devicons = {
+				enable = true;
+				settings.default = true;
+			};
+
 			telescope = {
 				enable = true;
 				lazyLoad.settings.cmd = "Telescope";
