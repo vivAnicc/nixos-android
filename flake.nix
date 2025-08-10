@@ -24,6 +24,7 @@
     };
 
 		zls = {
+			# url = "github:zigtools/zls";
 			url = "path:/home/droid/src/zls";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};

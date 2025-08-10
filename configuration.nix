@@ -31,7 +31,7 @@
     tldr
     git
     wget
-		helix
+		# helix
 		tree
 
     # inputs.helix.packages."${pkgs.system}".helix

@@ -14,13 +14,16 @@
     shellAbbrs = {
       v = "nvim";
       la = "ls -A";
+      s = "sudo";
+			rf = "rm -rf";
+
       n = "nix";
       nr = "nix repl";
       nd = "cd /etc/nixos";
       ngc = "sudo nix-collect-garbage -d";
       nbs = "nixos-rebuild switch --flake /etc/nixos#nick --sudo";
 			nbr = "nixos-rebuild repl --flake /etc/nixos#nick";
-      s = "sudo";
+
       g = "git";
       ga = "git add .";
       gc = {
