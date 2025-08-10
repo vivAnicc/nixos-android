@@ -16,6 +16,7 @@
       la = "ls -A";
       s = "sudo";
 			rf = "rm -rf";
+			"-" = "cd -";
 
       n = "nix";
       nr = "nix repl";
@@ -31,12 +32,16 @@
         expansion = "git commit -m '%'";
       };
       gca = "git commit --amend --no-edit";
+
+			tc = "rm -rf /home/droid/temp/*";
+			td = "cd /home/droid/temp";
     };
     functions = {
       d = ''
         mkdir $argv && cd $argv
       '';
       fish_greeting = "";
+      fish_command_not_found = "";
       fish_prompt = lib.fileContents ../dotfiles/fish/functions/fish_prompt.fish;
       fish_user_key_bindings = lib.fileContents ../dotfiles/fish/functions/fish_user_key_bindings.fish;
       fish_right_prompt = lib.fileContents ../dotfiles/fish/functions/fish_right_prompt.fish;
