@@ -15,6 +15,8 @@ in {
 	home.sessionVariables = {
 		# Set WAYLAND_DISPLAY to make nvim use clip as a clipboard provider
 		WAYLAND_DISPLAY = "none";
+		EDITOR = "nvim";
+		MANPAGER = "nvim +Man!";
 	};
 
 	home.packages = [

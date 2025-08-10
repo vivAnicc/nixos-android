@@ -12,11 +12,6 @@
     homeDirectory = "/home/droid";
     stateVersion = "25.11";
 
-    sessionVariables = {
-      EDITOR = "nvim";
-      MANPAGER = "less";
-    };
-
 		packages = [
 			pkgs.file
 		];
