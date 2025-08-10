@@ -59,21 +59,20 @@ in {
 
 			mini = {
 				enable = true;
-				mockDevIcons = true;
 				modules = {
-					icons.enable = true;
+					pick.enable = true;
 				};
 			};
 
-			telescope = {
-				enable = true;
-				lazyLoad.settings.cmd = "Telescope";
-				keymaps = {
-					"<leader>f" = "find_files";
-					"<leader>b" = "buffers";
-					"<leader>h" = "help_tags";
-				};
-			};
+			# telescope = {
+			# 	enable = true;
+			# 	lazyLoad.settings.cmd = "Telescope";
+			# 	keymaps = {
+			# 		"<leader>f" = "find_files";
+			# 		"<leader>b" = "buffers";
+			# 		"<leader>h" = "help_tags";
+			# 	};
+			# };
     };
 
 		lsp = {
@@ -136,6 +135,21 @@ in {
     };
 
 		keymaps = [
+			{
+				mode = "n";
+				key = "<leader>f";
+				action = "<cmd>Pick files<CR>";
+			}
+			{
+				mode = "n";
+				key = "<leader>b";
+				action = "<cmd>Pick buffers<CR>";
+			}
+			{
+				mode = "n";
+				key = "<leader>h";
+				action = "<cmd>Pick help<CR>";
+			}
 			{
 				mode = "n";
 				key = "<leader>e";
