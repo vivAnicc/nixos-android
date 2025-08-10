@@ -54,11 +54,15 @@ in {
 
       lspconfig.enable = true;
 
-			mini = {
+			# mini = {
+			# 	enable = true;
+			# 	modules = {
+			# 		pick.enable = true;
+			# 	};
+			# };
+
+			fzf-lua = {
 				enable = true;
-				modules = {
-					pick.enable = true;
-				};
 			};
     };
 
@@ -122,21 +126,21 @@ in {
     };
 
 		keymaps = [
-			{
-				mode = "n";
-				key = "<leader>f";
-				action = "<cmd>Pick files<CR>";
-			}
-			{
-				mode = "n";
-				key = "<leader>b";
-				action = "<cmd>Pick buffers<CR>";
-			}
-			{
-				mode = "n";
-				key = "<leader>h";
-				action = "<cmd>Pick help<CR>";
-			}
+			# {
+			# 	mode = "n";
+			# 	key = "<leader>f";
+			# 	action = "<cmd>Pick files<CR>";
+			# }
+			# {
+			# 	mode = "n";
+			# 	key = "<leader>b";
+			# 	action = "<cmd>Pick buffers<CR>";
+			# }
+			# {
+			# 	mode = "n";
+			# 	key = "<leader>h";
+			# 	action = "<cmd>Pick help<CR>";
+			# }
 			{
 				mode = "n";
 				key = "<leader>e";
