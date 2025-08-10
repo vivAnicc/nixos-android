@@ -48,21 +48,26 @@ in {
 				settings = {
 					highlight.enable = true;
 					indent.enable = true;
-					# auto_install = true;
 				};
       };
 
       lspconfig.enable = true;
 
-			# mini = {
-			# 	enable = true;
-			# 	modules = {
-			# 		pick.enable = true;
-			# 	};
-			# };
-
 			fzf-lua = {
 				enable = true;
+				profile = "default";
+				settings.files = {
+					git_icons = false;
+					file_icons = false;
+					color_icons = true;
+				};
+				keymaps = {
+					"<leader>sf" = "files";
+					"<leader>sb" = "buffers";
+					"<leader>sh" = "helptags";
+					"<leader>sr" = "resume";
+					"<leader>sg" = "global";
+				};
 			};
     };
 
@@ -87,10 +92,6 @@ in {
 					key = "gr";
 					lspBufAction = "references";
 				}
-				# {
-				# 	key = "<leader>lh";
-				# 	lspBufAction = "inlay_hint";
-				# }
 				{
 					key = "<leader>ls";
 					lspBufAction = "signature_help";
@@ -126,21 +127,6 @@ in {
     };
 
 		keymaps = [
-			# {
-			# 	mode = "n";
-			# 	key = "<leader>f";
-			# 	action = "<cmd>Pick files<CR>";
-			# }
-			# {
-			# 	mode = "n";
-			# 	key = "<leader>b";
-			# 	action = "<cmd>Pick buffers<CR>";
-			# }
-			# {
-			# 	mode = "n";
-			# 	key = "<leader>h";
-			# 	action = "<cmd>Pick help<CR>";
-			# }
 			{
 				mode = "n";
 				key = "<leader>e";
