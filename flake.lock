@@ -311,8 +311,8 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1754822567,
-        "narHash": "sha256-/LAwxaKevc1xV4+EC0vtoSR434iEboqcBlXiEelc4Uo=",
+        "lastModified": 1754824101,
+        "narHash": "sha256-TUmDXHj4ozmwxGgfxT2WyT/xjdhN3LUuGqL8wBvROo4=",
         "path": "/home/droid/nix/nordvpn",
         "type": "path"
       },
@@ -485,17 +485,14 @@
         "zig-overlay": "zig-overlay"
       },
       "locked": {
-        "lastModified": 1754741101,
-        "narHash": "sha256-TL7ZBRu+gesAYnmgwImn8fii5B0Sa2gksDUc9iAGdOY=",
-        "owner": "zigtools",
-        "repo": "zls",
-        "rev": "c470affb59ebf9464cc8e58c2ec410b0e7a7eaaa",
-        "type": "github"
+        "lastModified": 1754823613,
+        "narHash": "sha256-OwtsghsrIw6soYcuOcF47DMvLLF8PlHo0kl5KVLF3OI=",
+        "path": "/home/droid/src/zls",
+        "type": "path"
       },
       "original": {
-        "owner": "zigtools",
-        "repo": "zls",
-        "type": "github"
+        "path": "/home/droid/src/zls",
+        "type": "path"
       }
     }
   },
