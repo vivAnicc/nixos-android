@@ -42,24 +42,31 @@
   outputs = inputs@{ nixpkgs, ... }: {
     nixosConfigurations.nick = nixpkgs.lib.nixosSystem (
 			let
-				pkgs = import nixpkgs {
-					system = "aarch64-linux";
+				system = "aarch64-linux";
+				unfree-pkgs = import nixpkgs {
+					inherit system;
 					config = {
 						allowUnfree = true;
 						allowUnfreePredicate = _: true;
 					};
 				};
 			in {
-				system = "aarch64-linux";
+				inherit system;
 
-				specialArgs = {inherit pkgs inputs;};
+				specialArgs = {
+					inherit inputs unfree-pkgs;
+				};
 
 				modules = [
 					./configuration.nix
 					inputs.nordvpn.nixosModules.nordvpn
 					({ ... }: {
-						environment.systemPackages = [
-						];
+						systemd.services = {
+							forwarder_guest_launcher.wants = ["network-online.target"];
+							shutdown_runner.wants = ["network-online.target"];
+							storage_balloon_agent.wants = ["network-online.target"];
+							ttyd.wants = ["network-online.target"];
+						};
 					})
 				];
 			}
