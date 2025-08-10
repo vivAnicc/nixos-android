@@ -53,8 +53,16 @@ in {
 
       lspconfig.enable = true;
 
-			web-devicons = {
+			# web-devicons = {
+			# 	enable = true;
+			# };
+
+			mini = {
 				enable = true;
+				mockDevIcons = true;
+				modules = {
+					icons.enable = true;
+				};
 			};
 
 			telescope = {
