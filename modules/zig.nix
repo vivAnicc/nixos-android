@@ -10,6 +10,8 @@
 		enable = true;
 		settings = {
 			fmt_autosave = 0;
+			zig_lib_path = "/etc/profiles/per-user/droid/lib/std/";
+			zig_exe_path = "/etc/profiles/per-user/droid/bin/zig";
 		};
 	};
 }
