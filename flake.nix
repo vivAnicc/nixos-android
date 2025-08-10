@@ -59,9 +59,6 @@
 					inputs.nordvpn.nixosModules.nordvpn
 					({ ... }: {
 						environment.systemPackages = [
-							inputs.clip.packages."aarch64-linux".clip
-							inputs.clip.packages."aarch64-linux".wl-clip-copy
-							inputs.clip.packages."aarch64-linux".wl-clip-paste
 						];
 					})
 				];

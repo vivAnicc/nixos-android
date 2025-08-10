@@ -10,10 +10,18 @@ let
 in {
   imports = [
     inputs.nixvim.homeModules.nixvim
-  ];
+	];
+
+	home.sessionVariables = {
+		# Set WAYLAND_DISPLAY to make nvim use clip as a clipboard provider
+		WAYLAND_DISPLAY = "none";
+	};
 
 	home.packages = [
 		pkgs.nixd
+		inputs.clip.packages."aarch64-linux".clip
+		inputs.clip.packages."aarch64-linux".wl-clip-copy
+		inputs.clip.packages."aarch64-linux".wl-clip-paste
 	] ++ parsers-pkgs;
 
   programs.nixvim = {
@@ -66,7 +74,7 @@ in {
 				zls.enable = true;
 			};
 
-			inlayHints.enable = true;
+			inlayHints.enable = false;
 
 			keymaps = [
 				{
