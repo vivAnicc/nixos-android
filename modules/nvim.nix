@@ -22,6 +22,7 @@ in {
 		inputs.clip.packages."aarch64-linux".clip
 		inputs.clip.packages."aarch64-linux".wl-clip-copy
 		inputs.clip.packages."aarch64-linux".wl-clip-paste
+		pkgs.ripgrep
 	] ++ parsers-pkgs;
 
   programs.nixvim = {
@@ -53,26 +54,12 @@ in {
 
       lspconfig.enable = true;
 
-			# web-devicons = {
-			# 	enable = true;
-			# };
-
 			mini = {
 				enable = true;
 				modules = {
 					pick.enable = true;
 				};
 			};
-
-			# telescope = {
-			# 	enable = true;
-			# 	lazyLoad.settings.cmd = "Telescope";
-			# 	keymaps = {
-			# 		"<leader>f" = "find_files";
-			# 		"<leader>b" = "buffers";
-			# 		"<leader>h" = "help_tags";
-			# 	};
-			# };
     };
 
 		lsp = {
