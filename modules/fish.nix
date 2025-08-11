@@ -33,7 +33,7 @@
       };
       gca = "git commit --amend --no-edit";
 
-			tc = "rm -rf /home/droid/temp/*";
+			tc = "rm -rvf /home/droid/temp; mkdir -vp /home/droid/temp";
 			td = "cd /home/droid/temp";
     };
     functions = {
