@@ -8,8 +8,8 @@ let
 		lib.isDerivation
 		parsers;
 in {
-  imports = [
-    inputs.nixvim.homeModules.nixvim
+	imports = [
+		inputs.nixvim.homeModules.nixvim
 	];
 
 	home.sessionVariables = {
@@ -27,14 +27,14 @@ in {
 		pkgs.ripgrep
 	] ++ parsers-pkgs;
 
-  programs.nixvim = {
-    enable = true;
-    colorschemes.catppuccin.enable = true;
+	programs.nixvim = {
+		enable = true;
+		colorschemes.catppuccin.enable = true;
 
-    plugins = {
-    	lz-n.enable = true;
+		plugins = {
+			lz-n.enable = true;
 
-      oil = {
+			oil = {
 				enable = true;
 				lazyLoad.settings.cmd = "Oil";
 				settings = {
@@ -45,15 +45,15 @@ in {
 				};
 			};
 
-      treesitter = {
+			treesitter = {
 				enable = true;
 				settings = {
 					highlight.enable = true;
 					indent.enable = true;
 				};
-      };
+			};
 
-      lspconfig.enable = true;
+			lspconfig.enable = true;
 
 			fzf-lua = {
 				enable = true;
@@ -71,7 +71,7 @@ in {
 					"<leader>sg" = "global";
 				};
 			};
-    };
+		};
 
 		lsp = {
 			servers = {
@@ -80,6 +80,12 @@ in {
 			};
 
 			inlayHints.enable = false;
+
+			onAttach = ''
+				if client:supports_method('textDocument/completion') then
+					vim.lsp.completion.enable(true, client.id, bufnr, { autotrigger = true })
+				end
+			'';
 
 			keymaps = [
 				{
@@ -101,32 +107,41 @@ in {
 			];
 		};
 
-    opts = {
-      tabstop = 2;
-      shiftwidth = 2;
+		extraConfigLua = ''
+			vim.cmd("set completeopt+=noselect")
+			'';
 
-      ignorecase = true;
-      smartcase = true;
-      incsearch = true;
+		opts = {
+			tabstop = 2;
+			shiftwidth = 2;
 
-      number = true;
+			ignorecase = true;
+			smartcase = true;
+			incsearch = true;
+			hlsearch = false;
+
+			inccommand = "split";
+
+			number = true;
 			relativenumber = true;
-      signcolumn = "yes";
-      cursorcolumn = false;
+			signcolumn = "yes";
+			cursorcolumn = false;
 
-      smartindent = true;
+			smartindent = true;
 
-      swapfile = false;
-      undofile = true;
+			swapfile = false;
+			undofile = true;
 
-      termguicolors = true;
+			termguicolors = true;
 
-      winborder = "rounded";
-    };
+			winborder = "rounded";
 
-    globals = {
-      mapleader = " ";
-    };
+			scrolloff = 5;
+		};
+
+		globals = {
+			mapleader = " ";
+		};
 
 		keymaps = [
 			{
@@ -134,10 +149,31 @@ in {
 				key = "<leader>e";
 				action = "<cmd>Oil<CR>";
 			}
+			{
+				mode = "x";
+				key = "<leader>y";
+				action = "\"+y";
+			}
+			{
+				mode = "x";
+				key = "<leader>p";
+				action = "\"+p";
+			}
+			{
+				mode = "x";
+				key = "<leader>P";
+				action = "\"+P";
+			}
+			{
+				mode = "n";
+				key = "<Esc>";
+				action = "<cmd>nohlsearch<CR>";
+			}
+			{
+				mode = "n";
+				key = "<C-c>";
+				action = "<cmd>let @/=\"\"<CR>";
+			}
 		];
-
-		extraPackages = [
-			pkgs.nerd-fonts._0xproto
-		];
-  };
+	};
 }
