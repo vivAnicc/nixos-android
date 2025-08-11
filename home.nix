@@ -5,6 +5,7 @@
     modules/fish.nix
     modules/nvim.nix
 		modules/zig.nix
+		modules/c.nix
   ];
 
   home = {
