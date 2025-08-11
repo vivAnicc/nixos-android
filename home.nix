@@ -6,6 +6,7 @@
     modules/nvim.nix
 		modules/zig.nix
 		modules/c.nix
+		modules/nyx.nix
   ];
 
   home = {

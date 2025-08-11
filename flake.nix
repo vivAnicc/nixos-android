@@ -23,6 +23,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+		nyx = {
+			url = "github:Peritia-System/Nyx-Tools";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+
 		zls = {
 			# url = "github:zigtools/zls";
 			url = "path:/home/droid/src/zls";

@@ -375,6 +375,26 @@
         "type": "github"
       }
     },
+    "nyx": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1754919143,
+        "narHash": "sha256-BUcbzYi7aOVldK8JrkOmo/cg6xQqn8CfFB7lCacZMFg=",
+        "owner": "Peritia-System",
+        "repo": "Nyx-Tools",
+        "rev": "56a8b8ff879f35cf8849c9333fb4327bf4e1f298",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Peritia-System",
+        "repo": "Nyx-Tools",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "clip": "clip",
@@ -384,6 +404,7 @@
         "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim",
         "nordvpn": "nordvpn",
+        "nyx": "nyx",
         "zig": "zig",
         "zls": "zls"
       }
