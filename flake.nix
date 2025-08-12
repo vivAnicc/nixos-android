@@ -23,15 +23,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-		nyx = {
-			url = "github:Peritia-System/Nyx-Tools";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
-
 		zls = {
-			# url = "github:zigtools/zls";
-			url = "git+file:/home/droid/src/zls";
-			inputs.nixpkgs.follows = "nixpkgs";
+			url = "github:zigtools/zls";
+			inputs = {
+				nixpkgs.follows = "nixpkgs";
+				zig-overlay.follows = "zig";
+			};
 		};
 
 		zig = {
