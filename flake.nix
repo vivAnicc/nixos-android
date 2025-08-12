@@ -23,18 +23,18 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-		zls = {
-			url = "github:zigtools/zls";
-			inputs = {
-				nixpkgs.follows = "nixpkgs";
-				zig-overlay.follows = "zig";
-			};
-		};
-
-		zig = {
-			url = "github:mitchellh/zig-overlay";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
+		# zls = {
+		# 	url = "github:zigtools/zls";
+		# 	inputs = {
+		# 		nixpkgs.follows = "nixpkgs";
+		# 		zig-overlay.follows = "zig";
+		# 	};
+		# };
+		#
+		# zig = {
+		# 	url = "github:mitchellh/zig-overlay";
+		# 	inputs.nixpkgs.follows = "nixpkgs";
+		# };
 
 		nordvpn.url = "path:/home/droid/nix/nordvpn";
 
