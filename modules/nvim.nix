@@ -110,6 +110,25 @@ in {
 			vim.cmd("set completeopt+=noselect")
 			'';
 
+    autoCmd = [
+      {
+        event = ["BufEnter"];
+        command = "set tabstop=2";
+      }
+      {
+        event = ["BufEnter"];
+        command = "set softtabstop=2";
+      }
+      {
+        event = ["BufEnter"];
+        command = "set shiftwidth=2";
+      }
+      {
+        event = ["BufEnter"];
+        command = "set expandtab";
+      }
+    ];
+
 		opts = {
 			tabstop = 2;
       softtabstop = 2;
