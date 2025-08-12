@@ -49,7 +49,6 @@ in {
 				enable = true;
 				settings = {
 					highlight.enable = true;
-					indent.enable = true;
 				};
 			};
 
@@ -130,6 +129,7 @@ in {
 			cursorcolumn = false;
 
 			smartindent = true;
+      cindent = true;
 
 			swapfile = false;
 			undofile = true;

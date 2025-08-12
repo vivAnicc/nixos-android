@@ -6,10 +6,5 @@
 		inputs.zls.packages."${pkgs.system}".zls
 	];
 
-	programs.nixvim.plugins.zig = lib.mkIf config.programs.nixvim.enable {
-		enable = true;
-		settings = {
-			fmt_autosave = 0;
-		};
-	};
+	programs.nixvim.globals.zig_recommended_style = lib.mkIf config.programs.nixvim.enable 0;
 }
