@@ -10,6 +10,7 @@
     inputs.nixos-avf.nixosModules.avf
     inputs.home-manager.nixosModules.home-manager
 		modules/nordvpn.nix
+		modules/git.nix
   ];
 
   nix.settings.experimental-features = [
@@ -29,7 +30,7 @@
 
   environment.systemPackages = with pkgs; [
     tldr
-    git
+    # git
     wget
 		# helix
 		tree

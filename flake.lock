@@ -538,14 +538,17 @@
         "zig-overlay": "zig-overlay"
       },
       "locked": {
-        "lastModified": 1754823613,
-        "narHash": "sha256-OwtsghsrIw6soYcuOcF47DMvLLF8PlHo0kl5KVLF3OI=",
-        "path": "/home/droid/src/zls",
-        "type": "path"
+        "lastModified": 1754823604,
+        "narHash": "sha256-KI4+nsYB7PJUQ2ZvmpE2quPZq20M6qYg9frEForLY4A=",
+        "ref": "refs/heads/master",
+        "rev": "db2a7d8971697b126754615db6f1689043b0e2fd",
+        "revCount": 3258,
+        "type": "git",
+        "url": "file:/home/droid/src/zls"
       },
       "original": {
-        "path": "/home/droid/src/zls",
-        "type": "path"
+        "type": "git",
+        "url": "file:/home/droid/src/zls"
       }
     }
   },

@@ -30,7 +30,7 @@
 
 		zls = {
 			# url = "github:zigtools/zls";
-			url = "path:/home/droid/src/zls";
+			url = "git+file:/home/droid/src/zls";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
