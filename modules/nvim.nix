@@ -67,7 +67,12 @@ in {
 					"<leader>sb" = "buffers";
 					"<leader>sh" = "helptags";
 					"<leader>sr" = "resume";
-					"<leader>sg" = "global";
+					"<leader>sk" = "keymaps";
+					"<leader>sg" = "grep";
+					"<leader>sa" = "lsp_code_actions";
+					"<leader>ss" = "lsp_document_symbols";
+					"<leader>sdd" = "diagnostics_document";
+					"<leader>sdw" = "diagnostics_workspace";
 				};
 			};
 		};
@@ -98,6 +103,10 @@ in {
 				{
 					key = "gr";
 					lspBufAction = "references";
+				}
+				{
+					key = "<leader>lr";
+					lspBufAction = "rename";
 				}
 				{
 					key = "<leader>ls";
@@ -138,7 +147,7 @@ in {
 			ignorecase = true;
 			smartcase = true;
 			incsearch = true;
-			hlsearch = false;
+			# hlsearch = false;
 
 			inccommand = "split";
 
@@ -171,29 +180,34 @@ in {
 				action = "<cmd>Oil<CR>";
 			}
 			{
-				mode = "x";
+				mode = ["n" "v" "x"];
 				key = "<leader>y";
 				action = "\"+y";
 			}
 			{
-				mode = "x";
+				mode = ["n" "v" "x"];
 				key = "<leader>p";
 				action = "\"+p";
 			}
 			{
-				mode = "x";
+				mode = ["n" "v" "x"];
 				key = "<leader>P";
 				action = "\"+P";
 			}
 			{
 				mode = "n";
-				key = "<Esc>";
-				action = "<cmd>nohlsearch<CR>";
+				key = "<leader>o";
+				action = "moo<Esc>`o";
+			}
+			{
+				mode = "n";
+				key = "<leader>O";
+				action = "moO<Esc>`o";
 			}
 			{
 				mode = "n";
 				key = "<C-c>";
-				action = "<cmd>let @/=\"\"<CR>";
+				action = "<cmd>nohlsearch<CR><cmd>let @/=\"\"<CR>";
 			}
 		];
 	};
