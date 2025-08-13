@@ -11,6 +11,7 @@
     inputs.home-manager.nixosModules.home-manager
 		modules/nordvpn.nix
 		modules/git.nix
+    # modules/zig.nix
   ];
 
   nix.settings.experimental-features = [
