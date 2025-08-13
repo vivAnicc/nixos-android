@@ -9,6 +9,7 @@
 				name = "nick";
 				email = "nicc.gemm@gmail.com";
 			};
+      pull.rebase = false;
 		};
 	};
 }
