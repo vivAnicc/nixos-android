@@ -15,6 +15,7 @@
 
 		packages = [
 			pkgs.file
+      pkgs.unzip
 		];
   };
 

@@ -80,7 +80,6 @@ in {
 		lsp = {
 			servers = {
 				nixd.enable = true;
-        pygls.enable = true;
 				zls.enable = true;
 			};
 
