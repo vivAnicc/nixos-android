@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ pkgs, ... }:
 
 {
   services.openssh.enable = true;
@@ -13,5 +13,17 @@
     };
   };
 
-  # programs.fish.shellInit = lib.mkIf config.programs.fish.enable "ssh-agent fish";
+  environment.systemPackages = [
+    pkgs.sshfs
+  ];
+  # fileSystems."/mnt/android" = {
+  #   device = "user@10.121.67.34:/storage/emulated/0";
+  #   fsType = "sshfs";
+  #   options = [
+  #     "nodev"
+  #     "noatime"
+  #     "allow_other"
+  #     "ssh_command='ssh -p 2222'"
+  #   ];
+  # };
 }
