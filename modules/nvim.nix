@@ -36,7 +36,6 @@ in {
 
 			oil = {
 				enable = true;
-				lazyLoad.settings.cmd = "Oil";
 				settings = {
 					columns = [ "icons" ];
 					constrain_cursor = "name";
@@ -56,6 +55,7 @@ in {
 
 			fzf-lua = {
 				enable = true;
+        lazyLoad.settings.cmd = "FzfLua";
 				profile = "default";
 				settings.files = {
 					git_icons = false;

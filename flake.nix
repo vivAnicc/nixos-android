@@ -42,7 +42,7 @@
   };
 
   outputs = inputs@{ nixpkgs, ... }: {
-    nixosConfigurations.nick = nixpkgs.lib.nixosSystem (
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem (
 			let
 				system = "aarch64-linux";
 				unfree-pkgs = import nixpkgs {
