@@ -14,7 +14,6 @@
     shellAbbrs = {
       v = "nvim";
       la = "ls -A";
-      s = "sudo";
 			rf = "rm -rf";
 			"-" = "cd -";
 
@@ -35,6 +34,9 @@
 
 			tc = "rm -rvf /home/droid/temp; mkdir -vp /home/droid/temp";
 			td = "cd /home/droid/temp";
+
+      sshm = "sshfs -p 2222 10.121.67.34:/storage/emulated/0 /mnt/android";
+      sshu = "umount /mnt/android";
     };
     functions = {
       d = ''
