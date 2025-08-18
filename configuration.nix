@@ -5,13 +5,15 @@
 { pkgs, inputs, ... }:
 
 {
+  nixpkgs.config.allowUnfree = true;
+
   imports = [
     # include nixos-avf modules
     inputs.nixos-avf.nixosModules.avf
     inputs.home-manager.nixosModules.home-manager
 		modules/nordvpn.nix
 		modules/git.nix
-    # modules/zig.nix
+    modules/zerotierone.nix
   ];
 
   nix.settings.experimental-features = [
@@ -33,10 +35,7 @@
     tldr
     # git
     wget
-		# helix
 		tree
-
-    # inputs.helix.packages."${pkgs.system}".helix
   ];
 
   programs.fish.enable = true;
