@@ -264,22 +264,6 @@
         "type": "github"
       }
     },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1754498491,
-        "narHash": "sha256-erbiH2agUTD0Z30xcVSFcDHzkRvkRXOQ3lb887bcVrs=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "c2ae88e026f9525daf89587f3cbee584b92b6134",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixvim": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -301,21 +285,6 @@
         "owner": "nix-community",
         "repo": "nixvim",
         "type": "github"
-      }
-    },
-    "nordvpn": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_3"
-      },
-      "locked": {
-        "lastModified": 1754824101,
-        "narHash": "sha256-TUmDXHj4ozmwxGgfxT2WyT/xjdhN3LUuGqL8wBvROo4=",
-        "path": "/home/droid/nix/nordvpn",
-        "type": "path"
-      },
-      "original": {
-        "path": "/home/droid/nix/nordvpn",
-        "type": "path"
       }
     },
     "nuschtosSearch": {
@@ -349,7 +318,6 @@
         "nixos-avf": "nixos-avf",
         "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim",
-        "nordvpn": "nordvpn",
         "zig": "zig",
         "zls": "zls"
       }

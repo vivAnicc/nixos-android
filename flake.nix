@@ -36,7 +36,7 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
-		nordvpn.url = "path:/home/droid/nix/nordvpn";
+		# nordvpn.url = "path:/home/droid/nix/nordvpn";
 
 		clip.url = "path:/home/droid/proj/clip";
   };
@@ -61,7 +61,7 @@
 
 				modules = [
 					./configuration.nix
-					inputs.nordvpn.nixosModules.nordvpn
+					# inputs.nordvpn.nixosModules.nordvpn
 					({ ... }: {
 						systemd.services = {
 							forwarder_guest_launcher.wants = ["network-online.target"];

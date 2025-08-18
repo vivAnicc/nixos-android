@@ -11,7 +11,7 @@
     # include nixos-avf modules
     inputs.nixos-avf.nixosModules.avf
     inputs.home-manager.nixosModules.home-manager
-		modules/nordvpn.nix
+		# modules/nordvpn.nix
 		modules/git.nix
     modules/zerotierone.nix
   ];
