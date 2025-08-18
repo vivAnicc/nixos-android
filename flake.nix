@@ -38,7 +38,15 @@
 
 		# nordvpn.url = "path:/home/droid/nix/nordvpn";
 
-		clip.url = "path:/home/droid/proj/clip";
+		clip = {
+      url = "path:/home/droid/proj/clip";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    ccalc = {
+      url = "path:/home/droid/nix/ccalc";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ nixpkgs, ... }: {
