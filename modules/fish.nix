@@ -23,7 +23,7 @@
       nd = "cd /etc/nixos";
       ngc = "sudo nix-collect-garbage -d";
       nbs = "nixos-rebuild switch --sudo";
-			nbr = "nixos-rebuild repl --flake /etc/nixos#nick";
+			nbr = "nixos-rebuild repl";
 
       g = "git";
       ga = "git add .";

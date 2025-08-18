@@ -14,6 +14,7 @@
 		# modules/nordvpn.nix
 		modules/git.nix
     modules/zerotierone.nix
+    modules/ssh.nix
   ];
 
   nix.settings.experimental-features = [
@@ -28,8 +29,6 @@
     useUserPackages = true;
 		useGlobalPkgs = true;
   };
-
-  services.openssh.enable = true;
 
   environment.systemPackages = with pkgs; [
     tldr
