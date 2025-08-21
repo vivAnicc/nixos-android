@@ -55,7 +55,7 @@ in {
 
 			fzf-lua = {
 				enable = true;
-        lazyLoad.settings.cmd = "FzfLua";
+        # lazyLoad.settings.cmd = "FzfLua";
 				profile = "default";
 				settings.files = {
 					git_icons = false;
