@@ -34,7 +34,6 @@
     tldr
     # git
     wget
-		tree
   ];
 
   programs.fish.enable = true;
