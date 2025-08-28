@@ -39,12 +39,12 @@
 		# nordvpn.url = "path:/home/droid/nix/nordvpn";
 
 		clip = {
-      url = "path:/home/droid/proj/clip";
+      url = "github:vivAnicc/clip";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     ccalc = {
-      url = "path:/home/droid/nix/ccalc";
+      url = "github:vivAnicc/ccalc-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
