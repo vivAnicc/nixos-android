@@ -15,7 +15,6 @@
 
 		packages = [
 			pkgs.file
-      pkgs.unzip
       
       inputs.ccalc.packages.aarch64-linux.default
 		];
