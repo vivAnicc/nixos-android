@@ -45,6 +45,14 @@
       close = ''
         sudo poweroff
       '';
+      ensure = ''
+        cd $HOME/nix/save
+        echo "++ [$argv]" >> packages.nix
+        git add packages.nix
+        git commit -m "Added package \"$argv\" to saved packages"
+        nix build
+        cd -
+      '';
 
       fish_greeting = "";
       fish_command_not_found = "";
