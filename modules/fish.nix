@@ -42,6 +42,10 @@
       d = ''
         mkdir $argv && cd $argv
       '';
+      close = ''
+        sudo poweroff
+      '';
+
       fish_greeting = "";
       fish_command_not_found = "";
       fish_prompt = lib.fileContents ../dotfiles/fish/functions/fish_prompt.fish;
