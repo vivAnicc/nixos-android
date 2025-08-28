@@ -46,7 +46,7 @@
         sudo poweroff
       '';
       ensure = ''
-        cd $HOME/nix/save
+        cd $HOME/nix/utils/save
         echo "++ [$argv]" >> packages.nix
         git add packages.nix
         git commit -m "Added package \"$argv\" to saved packages"
