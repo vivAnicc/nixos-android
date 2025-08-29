@@ -32,7 +32,11 @@
       };
       gca = "git commit --amend --no-edit";
 
-			tc = "rm -rvf /home/droid/temp; mkdir -vp /home/droid/temp";
+			tc = ''
+        set -l directory (pwd)
+        rm -rvf /home/droid/temp; mkdir -vp /home/droid/temp
+        cd $directory
+      '';
 			td = "cd /home/droid/temp";
 
       sshm = "sshfs -p 2222 10.121.67.34:/storage/emulated/0 /mnt/android";
