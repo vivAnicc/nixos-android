@@ -32,8 +32,6 @@ in {
 		colorschemes.catppuccin.enable = true;
 
 		plugins = {
-			lz-n.enable = true;
-
 			oil = {
 				enable = true;
 				settings = {
@@ -59,7 +57,6 @@ in {
           dontCheck = true;
           doCheck = false;
         });
-        # lazyLoad.settings.cmd = "FzfLua";
 				profile = "default";
 				settings.files = {
 					git_icons = false;
