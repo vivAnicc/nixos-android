@@ -174,6 +174,8 @@ in {
 			winborder = "rounded";
 
 			scrolloff = 5;
+
+      timeout = false;
 		};
 
 		globals = {
