@@ -43,6 +43,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+		edit = {
+      url = "github:vivAnicc/edit";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     ccalc = {
       url = "github:vivAnicc/ccalc-flake";
       inputs.nixpkgs.follows = "nixpkgs";

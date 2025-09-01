@@ -17,6 +17,7 @@
 			pkgs.file
       
       inputs.ccalc.packages.aarch64-linux.default
+      inputs.edit.packages.aarch64-linux.default
 		];
   };
 

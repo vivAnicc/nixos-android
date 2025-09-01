@@ -77,6 +77,26 @@
         "type": "github"
       }
     },
+    "edit": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1756734009,
+        "narHash": "sha256-+M8e2B/GORw7Ub9FrvEjpuisidQ8OZ/Oxq2FH3ktA90=",
+        "owner": "vivAnicc",
+        "repo": "edit",
+        "rev": "bdda0f393cc31c2cbf76f62a7586556d81abc08e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vivAnicc",
+        "repo": "edit",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -323,6 +343,7 @@
       "inputs": {
         "ccalc": "ccalc",
         "clip": "clip",
+        "edit": "edit",
         "home-manager": "home-manager",
         "nix-your-shell": "nix-your-shell",
         "nixos-avf": "nixos-avf",
